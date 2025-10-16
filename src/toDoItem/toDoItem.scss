@@ -1,0 +1,60 @@
+.toDoItem {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  transition: all 0.3s ease;
+
+  &--done {
+    .toDoItem__title {
+      color: greenyellow;
+      text-decoration: line-through;
+    }
+  }
+
+  &--edit {
+    .toDoItem__title,
+    .toDoItem__actions {
+      display: none;
+    }
+
+    .toDoItem__editForm {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+    }
+  }
+
+  &--remove {
+    margin-left: 100%;
+    opacity: 0;
+  }
+
+  &__title {
+    margin: 0;
+    text-decoration: none;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  &__editForm {
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    .item {
+      width: 100%;
+    }
+
+    input {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+}
