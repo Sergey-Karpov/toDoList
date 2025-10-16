@@ -22,6 +22,9 @@ export default class ToDoItem {
     const toDoItemTitle = document.createElement('h2')
     toDoItemTitle.classList.add('toDoItem__title')
     toDoItemTitle.textContent = this.task
+    toDoItemTitle.addEventListener('click', () => {
+      this.#editTaskText()
+    })
 
     const toDoItemActions = document.createElement('div')
     toDoItemActions.classList.add('toDoItem__actions')
@@ -106,6 +109,7 @@ export default class ToDoItem {
   #editTaskText() {
     this.domEl.classList.add('toDoItem--edit')
     this.editTaskInput.value = this.task
+    this.editTaskInput.focus()
   }
 
   #saveChanges() {

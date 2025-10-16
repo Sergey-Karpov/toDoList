@@ -121,10 +121,12 @@ button:focus-visible {
 }
 
 .input {
-  min-width: 240px;
+  min-width: 360px;
   min-height: 40px;
   border-radius: 8px;
   border: 2px solid transparent;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .list {
